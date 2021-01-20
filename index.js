@@ -1,8 +1,9 @@
 const { GraphQLApp } = require('@keystonejs/app-graphql');
 const { AdminUIApp } = require('@keystonejs/app-admin-ui');
-const PROJECT_NAME = 'test-log-in-app';
 const { authStrategy, keystone } = require('./lists');
 const { userTypesEnum } = require('./types');
+
+const PROJECT_NAME = 'test-log-in-app';
 
 module.exports = {
   keystone,
