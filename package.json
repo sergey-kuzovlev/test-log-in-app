@@ -1,10 +1,10 @@
 {
-  "name": "@keystonejs/example-projects-starter",
-  "description": "An example KeystoneJS project with a User list and Authentication.",
+  "name": "@keystonejs/example-projects-blank",
+  "description": "A blank KeystoneJS starter project.",
   "private": true,
-  "version": "5.0.23",
+  "version": "5.0.16",
   "author": "The KeystoneJS Development Team",
-  "repository": "https://github.com/keystonejs/keystone/tree/master/packages/create-keystone-app/example-projects/starter",
+  "repository": "https://github.com/keystonejs/keystone/tree/master/packages/create-keystone-app/example-projects/blank",
   "homepage": "https://github.com/keystonejs/keystone",
   "license": "MIT",
   "engines": {
@@ -14,15 +14,19 @@
     "dev": "cross-env NODE_ENV=development DISABLE_LOGGING=true keystone dev",
     "build": "cross-env NODE_ENV=production keystone build",
     "start": "cross-env NODE_ENV=production keystone start",
-    "create-tables": "cross-env CREATE_TABLES=true keystone create-tables"
+    "create-tables": "cross-env keystone create-tables",
+    "start:dev": "cross-env nodemon --exec keystone"
   },
   "dependencies": {
     "@keystonejs/adapter-knex": "^12.0.4",
-    "@keystonejs/app-admin-ui": "^7.3.12",
-    "@keystonejs/app-graphql": "^6.2.0",
+    "@keystonejs/app-admin-ui": "^7.3.8",
+    "@keystonejs/app-graphql": "^6.2.1",
     "@keystonejs/auth-password": "^6.0.0",
-    "@keystonejs/fields": "^21.0.0",
     "@keystonejs/keystone": "^18.0.0",
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
