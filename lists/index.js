@@ -10,11 +10,11 @@ const keystone = new Keystone({
   adapter: new Adapter(adapterConfig),
 });
 
-keystone.createList('user', UserSchema);
+keystone.createList('users', UserSchema);
 
 const authStrategy = keystone.createAuthStrategy({
   type: PasswordAuthStrategy,
-  list: 'user',
+  list: 'users',
   config: {
     identityField: 'email',
     secretField: 'passwordHash',

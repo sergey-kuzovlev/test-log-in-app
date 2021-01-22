@@ -8,6 +8,7 @@ module.exports = {
       isRequired: true,
     },
     passwordHash: {
+      label: 'Password',
       type: Password,
       isRequired: true,
     },
@@ -16,6 +17,8 @@ module.exports = {
       isRequired: true,
     },
   },
+  // singular: 'user',
+  plural: 'users',
   access: {
     read: userIsAdmin,
     update: userIsAdmin,
